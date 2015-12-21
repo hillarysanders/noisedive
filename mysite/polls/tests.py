@@ -37,7 +37,6 @@ class QuestionMethodTests(TestCase):
         old_question = Question(pub_date=time)
         self.assertEqual(old_question.was_published_recently(), False)
 
-
     def test_was_published_recently_with_recent_question(self):
         """
         was_published_recently() should return True for questions whose
