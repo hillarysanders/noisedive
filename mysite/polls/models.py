@@ -3,7 +3,7 @@ from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 import datetime
 from django.utils import timezone
-
+from django import forms
 
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Question(models.Model):
@@ -27,3 +27,12 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+@python_2_unicode_compatible
+class RecipeForm(forms.Form):
+    name = forms.CharField()
+    url = forms.URLField()
+    input = forms.CharField(widget=forms.Textarea)
+
+    def __str__(self):
+        return self.input

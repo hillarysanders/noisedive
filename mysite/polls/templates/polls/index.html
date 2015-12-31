@@ -1,3 +1,8 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<div class ="header"><h1>The Recipe Reader</h1></div>
+
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -7,3 +12,6 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+
+
