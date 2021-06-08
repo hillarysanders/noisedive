@@ -136,8 +136,10 @@ if debug:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 else:
-    STATIC_ROOT = '/home/public/images/'
+    STATIC_ROOT = '/home/public/images/static/'
     STATIC_URL = '/static/'
+    MEDIA_ROOT = '/home/public/images/media/'
+    MEDIA_URL = '/media/'
     STATICFILES_DIRS = [
         BASE_DIR / "static",
         '/home/public/images/',
