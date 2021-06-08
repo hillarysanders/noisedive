@@ -140,12 +140,12 @@ else:
     STATIC_URL = '/static/'
     MEDIA_ROOT = '/home/public/images/media/'
     MEDIA_URL = '/media/'
-    STATICFILES_DIRS = [
-#         BASE_DIR / "static",
-        '/home/public/images/',
-        '/home/public/images/media',
-        '/home/public/images/static',
-    ]
+#     STATICFILES_DIRS = [
+# #         BASE_DIR / "static",
+#         '/home/public/images/',
+#         '/home/public/images/media',
+#         '/home/public/images/static',
+#     ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
