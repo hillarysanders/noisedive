@@ -30,7 +30,8 @@ DEBUG = False
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1']
 else:
-    ALLOWED_HOSTS = ['noisedive.org',
+    ALLOWED_HOSTS = ['127.0.0.1',
+                     'noisedive.org',
                      'www.noisedive.org',
                      'noisedive.nfshost.com',
                      '208.94.118.154']
@@ -136,10 +137,10 @@ if DEBUG:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 else:
-    STATIC_ROOT = '/home/public/images/static/'
     STATIC_URL = '/static/'
-    MEDIA_ROOT = '/home/public/images/media/'
+    STATIC_ROOT = '/home/public/images/static/'
     MEDIA_URL = '/media/'
+    MEDIA_ROOT = '/home/public/images/media/'
 #     STATICFILES_DIRS = [
 # #         BASE_DIR / "static",
 #         '/home/public/images/',
