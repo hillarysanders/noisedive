@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['noisedive.org',
                  'www.noisedive.org',
-                 'noisedive.nfshost.com']
+                 'noisedive.nfshost.com',
+                 '208.94.118.154']
 
 
 # Application definition
