@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1']
@@ -130,10 +130,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+if debug:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+else:
+    STATIC_ROOT = '/home/public/images/'
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [
+        BASE_DIR / "static",
+        '/home/public/images/',
+    ]
+
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Default primary key field type
