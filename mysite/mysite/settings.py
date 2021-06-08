@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-1rali6n^e(7ti2h(bzj0zo0p%#zx8a4h7p2&&$f4w1n(1l(3d)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['noisedive.org',
+                 'www.noisedive.org',
+                 'noisedive.nfshost.com']
 
 
 # Application definition
