@@ -131,6 +131,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+if os.environ.get('personal')=='/Users/hillary.sanders/sophos/datascience/datascience/personal':
+    HOME_DIR = '/Users/hillary.sanders/code/public/'
+else:
+    HOME_DIR = '/home/public/'
+
 if DEBUG:
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
@@ -138,9 +143,9 @@ if DEBUG:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 else:
     STATIC_URL = '/static/'
-    STATIC_ROOT = '/home/public/images/static/'
+    STATIC_ROOT =  os.path.join(HOME_DIR, 'images/static/')
     MEDIA_URL = '/media/'
-    MEDIA_ROOT = '/home/public/images/media/'
+    MEDIA_ROOT =  os.path.join(HOME_DIR, 'images/media/')
 #     STATICFILES_DIRS = [
 # #         BASE_DIR / "static",
 #         '/home/public/images/',
