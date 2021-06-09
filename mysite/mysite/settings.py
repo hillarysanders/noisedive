@@ -142,16 +142,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-# if DEBUG:
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-# else:
-#     STATIC_URL = '/static/'
-# #     STATIC_ROOT =  os.path.join(HOME_DIR, 'images/static/')
-#     MEDIA_URL = '/media/'
-# #     MEDIA_ROOT =  os.path.join(HOME_DIR, 'images/media/')
+if DEBUG:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+else:
+    STATIC_URL = '/static/'
+    STATIC_ROOT =  os.path.join(HOME_DIR, 'images/static/')
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT =  os.path.join(HOME_DIR, 'images/media/')
 # #     STATICFILES_DIRS = [
 # # #         BASE_DIR / "static",
 # #         '/home/public/images/',
