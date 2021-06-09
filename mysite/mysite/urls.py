@@ -33,3 +33,22 @@ else:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 #     urlpatterns += re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT})
 #     urlpatterns += re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT})
+
+
+# TODO ugh... maybe clear it and start from scratch on > ssh hsanders_noisedive@ssh.phx.nearlyfreespeech.net
+# TODO
+# TODO endless server errors.
+# TODO
+# TODO Also, wtf, nearlyfreespeech is useless if I CAN NEVER SEE THE FUCKING ERROR MESSAGES.
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO
+# TODO

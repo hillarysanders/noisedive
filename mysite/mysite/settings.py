@@ -135,6 +135,7 @@ if os.environ.get('personal')=='/Users/hillary.sanders/sophos/datascience/datasc
     HOME_DIR = '/Users/hillary.sanders/code/public/'
 else:
     HOME_DIR = '/home/public/'
+    HOME_DIR = '/fs6b/noisedive/public/'
 
 
 STATIC_URL = '/static/'
@@ -142,16 +143,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-# if DEBUG:
-#     STATIC_URL = '/static/'
-#     STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-#     MEDIA_URL = '/media/'
-#     MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-# else:
-#     STATIC_URL = '/static/'
-#     STATIC_ROOT =  os.path.join(HOME_DIR, 'images/static/')
-#     MEDIA_URL = '/media/'
-#     MEDIA_ROOT =  os.path.join(HOME_DIR, 'images/media/')
+#  CHANGING:
+if DEBUG:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+else:
+    STATIC_URL = '/static/'
+    STATIC_ROOT =  os.path.join(HOME_DIR, 'images/static/')
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT =  os.path.join(HOME_DIR, 'images/media/')
 # #     STATICFILES_DIRS = [
 # # #         BASE_DIR / "static",
 # #         '/home/public/images/',
