@@ -28,7 +28,11 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['127.0.0.1',
+                     'noisedive.org',
+                     'www.noisedive.org',
+                     'noisedive.nfshost.com',
+                     '208.94.118.154']
 else:
     ALLOWED_HOSTS = ['127.0.0.1',
                      'noisedive.org',
