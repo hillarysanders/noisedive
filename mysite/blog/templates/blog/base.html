@@ -4,10 +4,16 @@
 <head>
     <title>Django Central</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
     <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous" />
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/custom.css' %}">
+
+
     <!--    make mathjax work: -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
@@ -25,31 +31,40 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#summernote').summernote({
+                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'Montserrat'],
+                fontNamesIgnoreCheck: ['Montserrat']
+            });
+            $('#summernote').summernote('fontName', 'Roboto');
+        });
+    </script>
 </head>
 
 <body>
 <style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 17px;
-        background-color: #fdfdfd;
-    }
-    .shadow {
-        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
-    }
-    .btn-danger {
-        color: #fff;
-        background-color: #f00000;
-        border-color: #dc281e;
-    }
-    .masthead {
-        background: #3398E1;
-        height: auto;
-        padding-bottom: 15px;
-        box-shadow: 0 16px 48px #E3E7EB;
-        padding-top: 10px;
-    }
+    /*body {*/
+    /*    font-family: "Roboto", sans-serif;*/
+    /*    font-size: 17px;*/
+    /*    background-color: #fdfdfd;*/
+    /*}*/
+    /*.shadow {*/
+    /*    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);*/
+    /*}*/
+    /*.btn-danger {*/
+    /*    color: #fff;*/
+    /*    background-color: #f00000;*/
+    /*    border-color: #dc281e;*/
+    /*}*/
+    /*.masthead {*/
+    /*    background: #3398E1;*/
+    /*    height: auto;*/
+    /*    padding-bottom: 15px;*/
+    /*    box-shadow: 0 16px 48px #E3E7EB;*/
+    /*    padding-top: 10px;*/
+    /*}*/
 </style>
 
 <!-- Navigation -->

@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'blog/base.html' %} {% block content %}
 
 <div class="container">
     <div class="row">
@@ -9,7 +9,7 @@
                 <p class="card-text ">{{ object.content | safe }}</p>
             </div>
         </div>
-        {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+        {% block sidebar %} {% include 'blog/sidebar.html' %} {% endblock sidebar %}
     </div>
 </div>
 
