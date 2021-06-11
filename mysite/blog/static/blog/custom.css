@@ -15,3 +15,24 @@ body {
     box-shadow: 0 16px 48px #E3E7EB;
     padding-top: 10px;
 }
+
+.btn {
+    /*border: 1px solid darkslategrey;*/
+    border: 0 none;
+    letter-spacing: 1px;
+    border-radius:0;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+.btn:hover{
+    background-color: teal;
+}
+
+.btn-primary{
+    background-color: #305050;
+}
+.btn-info{
+    background-color: #608080;
+}
