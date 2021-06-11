@@ -21,6 +21,7 @@ body {
     border: 0 none;
     letter-spacing: 1px;
     border-radius:0;
+    margin-bottom:5px;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -35,4 +36,9 @@ body {
 }
 .btn-info{
     background-color: #608080;
+}
+.btn-linkedin {
+    background-color: #0E76A8;
+    color: #fff;
+    font-size: 12px;
 }
